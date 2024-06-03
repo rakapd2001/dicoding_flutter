@@ -11,11 +11,13 @@ import 'Images.dart';
 import 'Fonts.dart';
 import 'ListViews.dart';
 import 'ExpandedFlexible.dart';
+import 'ResponsiveLayout.dart';
+import 'latihanLayout.dart';
 
 void main() {
   runApp(const MaterialApp(
     title: 'Page',
-    home: MyPage(),
+    home: LatihanLayout(),
   ));
 }
 
@@ -44,6 +46,10 @@ class MyPage extends StatelessWidget {
                             builder: (context) => const ContainerPage()));
                   },
                   child: const Text("Pindah ke halaman container")),
+              const SizedBox(
+                height: 16.0,
+              ),
+              const Text('Parsing data ke second page'),
               ElevatedButton(
                   onPressed: () {
                     Navigator.push(
